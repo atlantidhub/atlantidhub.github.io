@@ -1,0 +1,114 @@
+body {
+  background-color: #000000;
+  background-image: radial-gradient(#b794f4 1px, transparent 1px),
+                    radial-gradient(#b794f4 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  color: #d0c4e8;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0a001a;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #2a003f;
+  box-shadow: 0 4px 6px rgba(168, 85, 247, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: #c084fc;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #b095d2;
+}
+
+.glitch {
+  animation: glitch 2s infinite;
+  display: inline-block;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #c084fc, -2px -2px #7f5af0; }
+  50% { text-shadow: -2px -2px #c084fc, 2px 2px #7f5af0; }
+  100% { text-shadow: 2px 2px #c084fc, -2px -2px #7f5af0; }
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  border-bottom: 1px solid #4c1d95;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #a855f7;
+  font-size: 1.4rem;
+}
+
+.log-entry, .media-item {
+  background-color: #10001a;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-left: 4px solid #a855f7;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.log-entry:hover, .media-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+}
+
+button {
+  background-color: #1a001f;
+  color: #c084fc;
+  border: 1px solid #a855f7;
+  padding: 0.5rem 1rem;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #25002f;
+  box-shadow: 0 0 10px #a855f7;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b21a8;
+  padding: 2rem;
+  border-top: 1px solid #2a003f;
+  margin-top: 4rem;
+}
+
+a {
+  color: #d8b4fe;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #f3e8ff;
+  text-decoration: underline;
+}
