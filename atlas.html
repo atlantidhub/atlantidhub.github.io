@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- This page is not linked in navigation for protocol compliance -->
-  <meta name="description" content="Observer ID: 64 6f 20 6e 6f 74 20 6c 65 74 20 74 68 65 6d 20 66 6f 6c 6c 6f 77" />
-  <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Redacted</title>
@@ -11,16 +8,55 @@
   <style>
     body {
       background-color: black;
-      color: #ff00c8;
+      color: white;
       text-align: center;
       padding: 4rem;
       font-family: 'Courier New', monospace;
+      transition: background-color 0.5s ease;
+    }
+
+    h1, p {
+      color: white;
+    }
+
+    #emailReveal {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: none;
+      animation: flashWhite 1s infinite;
+    }
+
+    @keyframes flashWhite {
+      0%, 100% { color: white; opacity: 1; }
+      50% { color: transparent; opacity: 0; }
     }
   </style>
 </head>
-  
 <body>
   <h1>INFORMATION REDACTED</h1>
   <p>BY ATLAS PROTOCOL 2.1.19</p>
+
+  <div id="emailReveal">Contact node: watchthevoid.empty@gmail.com</div>
+
+  <script>
+    const secretCode = "ATLAS";
+    let buffer = "";
+
+    window.addEventListener("keydown", (e) => {
+      const char = e.key.toUpperCase();
+      if (/^[A-Z]$/.test(char)) {
+        buffer += char;
+        if (buffer.length > secretCode.length) {
+          buffer = buffer.slice(-secretCode.length);
+        }
+
+        if (buffer === secretCode) {
+          document.body.style.backgroundColor = "#8b0000"; // blood red
+          document.getElementById("emailReveal").style.display = "block";
+        }
+      }
+    });
+  </script>
 </body>
 </html>
