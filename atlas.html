@@ -18,14 +18,6 @@
       color: white;
     }
 
-    #emailReveal {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      font-weight: bold;
-      display: none;
-      animation: flashWhite 1s infinite;
-    }
-
     @keyframes flashWhite {
       0%, 100% { color: white; opacity: 1; }
       50% { color: transparent; opacity: 0; }
@@ -36,25 +28,7 @@
   <h1>INFORMATION REDACTED</h1>
   <p>BY ATLAS PROTOCOL 2.1.19</p>
 
-  <div id="emailReveal">Contact node: watchthevoid.empty@gmail.com</div>
+  <meta>Contact node: watchthevoid.empty@gmail.com</meta>
 
-  <script>
-    const secretCode = "ATLAS";
-    let buffer = "";
-
-    window.addEventListener("keydown", (e) => {
-      const char = e.key.toUpperCase();
-      if (/^[A-Z]$/.test(char)) {
-        buffer += char;
-        if (buffer.length > secretCode.length) {
-          buffer = buffer.slice(-secretCode.length);
-        }
-
-        if (buffer === secretCode) {
-          document.getElementById("emailReveal").style.display = "block";
-        }
-      }
-    });
-  </script>
 </body>
 </html>
