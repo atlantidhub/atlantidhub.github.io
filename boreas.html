@@ -7,26 +7,68 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
     body {
-      animation: glitchFade 2s forwards;
+      background-color: black;
+      color: #d0c4e8;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
     }
-    @keyframes glitchFade {
-      0% { background: black; color: #d0c4e8; opacity: 1; }
-      50% { background: #0a001a; color: #a855f7; transform: scale(1.02); }
-      75% { opacity: 0.3; }
-      100% { opacity: 0; }
+
+    main {
+      padding: 4rem;
+      text-align: center;
+    }
+
+    #denied {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 0, 0, 0.9);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1000;
+      animation: flashDenied 1s 1.5s forwards;
+    }
+
+    @keyframes flashDenied {
+      0% { opacity: 0; }
+      50% { opacity: 0.8; }
+      100% { opacity: 1; }
     }
   </style>
-  <script>
-    setTimeout(() => {
-      window.location.href = "atlas.html";
-    }, 2200);
-  </script>
 </head>
-<body>
+<body onload="startSequence()">
+
+  <audio id="glitchSound" src="assets/glitch.mp3" preload="auto"></audio>
+
   <main>
     <h1 class="glitch">Loading: Boreas Incident Data</h1>
     <p>Decrypting signal fragment 9A-12-BR...</p>
     <p>Opening command archive <code>/records/boreas</code>...</p>
   </main>
+
+  <div id="denied">ACCESS DENIED</div>
+
+  <script>
+    function startSequence() {
+      const glitch = document.getElementById("glitchSound");
+      if (glitch) {
+        glitch.play().catch(() => {}); // prevent autoplay block errors
+      }
+
+      setTimeout(() => {
+        window.location.href = "atlas.html";
+      }, 2500);
+    }
+  </script>
+
 </body>
 </html>
