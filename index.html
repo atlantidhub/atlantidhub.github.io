@@ -15,43 +15,43 @@
             color: #d0c4e8;
   }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-  const countdownElement = document.getElementById('countdown');
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const countdownElement = document.getElementById('countdown');
 
-  let endTime = localStorage.getItem("void_timer_end");
+    let endTime = localStorage.getItem("void_timer_end");
 
-  if (!endTime) {
-    const now = new Date();
-    now.setSeconds(0);
-    const sixDaysLater = new Date(now.getTime() + 6 * 24 * 60 * 60 * 1000);
-    endTime = sixDaysLater.getTime();
-    localStorage.setItem("void_timer_end", endTime);
-  } else {
-    endTime = parseInt(endTime, 10); // make sure it's a number!
-  }
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = endTime - now;
-
-    if (distance <= 0) {
-      countdownElement.textContent = "WAVE 1 COMPLETE — NEW INFO SOON";
-      return;
+    if (!endTime) {
+      const now = new Date();
+      now.setSeconds(0);
+      const sixDaysLater = new Date(now.getTime() + 6 * 24 * 60 * 60 * 1000);
+      endTime = sixDaysLater.getTime();
+      localStorage.setItem("void_timer_end", endTime);
+    } else {
+      endTime = parseInt(endTime, 10);
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = endTime - now;
 
-    countdownElement.textContent =
-      `TIME REMAINING: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
+      if (distance <= 0) {
+        countdownElement.textContent = "WAVE 1 COMPLETE — NEW INFO SOON";
+        return;
+      }
 
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-        });
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.textContent =
+        `TIME REMAINING: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  });
 </script>
 
 </head>
