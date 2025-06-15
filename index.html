@@ -18,15 +18,16 @@
     <script>
   const countdownElement = document.getElementById('countdown');
 
-  // Store countdown in localStorage — persists even after reloads
   let endTime = localStorage.getItem("void_timer_end");
 
   if (!endTime) {
     const now = new Date();
-    now.setSeconds(0); // Optional: aligns to clean timestamp
+    now.setSeconds(0);
     const sixDaysLater = new Date(now.getTime() + 6 * 24 * 60 * 60 * 1000);
     endTime = sixDaysLater.getTime();
     localStorage.setItem("void_timer_end", endTime);
+  } else {
+    endTime = parseInt(endTime, 10); // make sure it's a number!
   }
 
   function updateCountdown() {
@@ -48,7 +49,7 @@
   }
 
   setInterval(updateCountdown, 1000);
-  updateCountdown(); // run immediately
+  updateCountdown();
 </script>
 
 </head>
