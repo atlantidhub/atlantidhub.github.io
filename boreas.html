@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Fate of Boreas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      animation: glitchFade 2s forwards;
+    }
+    @keyframes glitchFade {
+      0% { background: black; color: #d0c4e8; opacity: 1; }
+      50% { background: #0a001a; color: #a855f7; transform: scale(1.02); }
+      75% { opacity: 0.3; }
+      100% { opacity: 0; }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "atlas.html";
+    }, 2200);
+  </script>
+</head>
+<body>
+  <main>
+    <h1 class="glitch">Loading: Boreas Incident Data</h1>
+    <p>Decrypting signal fragment 9A-12-BR...</p>
+    <p>Opening command archive <code>/records/boreas</code>...</p>
+  </main>
+</body>
+</html>
