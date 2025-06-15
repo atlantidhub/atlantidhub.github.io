@@ -16,6 +16,7 @@
   }
     </style>
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
   const countdownElement = document.getElementById('countdown');
 
   let endTime = localStorage.getItem("void_timer_end");
@@ -50,6 +51,7 @@
 
   setInterval(updateCountdown, 1000);
   updateCountdown();
+        });
 </script>
 
 </head>
