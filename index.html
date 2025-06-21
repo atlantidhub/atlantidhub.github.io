@@ -1,31 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Azhinu Station</title>
-  <link rel="stylesheet" href="css/style.css" />
-
-  <script>
-  // Periodically trigger background glitch
-  setInterval(() => {
-    document.body.classList.add('glitching');
-    setTimeout(() => {
-      document.body.classList.remove('glitching');
-    }, 200); // Glitch duration
-  }, 7000); // Every 7 seconds
-</script>
+  <title>Station Defunct</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="error-tag">KORVAX ARCHIVE PORT ERROR 009</div>
+  <div class="container">
+    <h1 class="glitch">STATION DEFUNCT</h1>
+    <p class="subtext">ABS Archive access key lost.</p>
+    <p class="tag">KORVAX ARCHIVE PORT ERROR 009</p>
+  </div>
 
-  <h1>STATION DEFUNCT</h1>
-  <p>ABS Archive access key lost.</p>
-  
-  <!-- <audio autoplay loop>
-    <source src="assets/static-glitch.mp3" type="audio/mpeg">
-  </audio> -->
+  <audio autoplay loop hidden>
+    <source src="audio/boreas_hidden.wav" type="audio/wav" />
+  </audio>
 
-  <img class="glyph-watermark" src="assets/glyph.png" alt="glyph mark" />
+  <!-- Hidden Signal: 41 7a 68 69 6e 75 -->
 </body>
 </html>
