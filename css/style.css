@@ -1,5 +1,19 @@
 html, body {
+  margin: 0;
+  padding: 0;
   background-color: #8b0000;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
 }
 
 body.glitching {
