@@ -1,172 +1,78 @@
-body {
-  background-color: #000000;
-  background-image: radial-gradient(#b794f4 1px, transparent 1px),
-                    radial-gradient(#b794f4 1px, transparent 1px);
-  background-position: 0 0, 25px 25px;
-  background-size: 50px 50px;
-  color: #d0c4e8;
-  font-family: 'Courier New', monospace;
+html, body {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #0a001a;
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 1px solid #2a003f;
-  box-shadow: 0 4px 6px rgba(168, 85, 247, 0.1);
-}
-
-header h1 {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  color: #c084fc;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1rem;
-  color: #b095d2;
-}
-
-.glitch {
-  animation: glitch 2s infinite;
-  display: inline-block;
-}
-
-@keyframes glitch {
-  0% { text-shadow: 2px 2px #c084fc, -2px -2px #7f5af0; }
-  50% { text-shadow: -2px -2px #c084fc, 2px 2px #7f5af0; }
-  100% { text-shadow: 2px 2px #c084fc, -2px -2px #7f5af0; }
-}
-
-main {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-h2 {
-  border-bottom: 1px solid #4c1d95;
-  padding-bottom: 0.5rem;
-  text-transform: uppercase;
-  color: #a855f7;
-  font-size: 1.4rem;
-}
-
-.log-entry, .media-item {
-  background-color: #10001a;
-  padding: 1rem 1.5rem;
-  margin-top: 1rem;
-  border-left: 4px solid #a855f7;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.log-entry:hover, .media-item:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
-}
-
-button {
-  background-color: #1a001f;
-  color: #c084fc;
-  border: 1px solid #a855f7;
-  padding: 0.5rem 1rem;
+  background-color: #300000;
+  color: #fff;
   font-family: 'Courier New', monospace;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 4px;
-  margin-top: 0.5rem;
-}
-
-button:hover {
-  background-color: #25002f;
-  box-shadow: 0 0 10px #a855f7;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #6b21a8;
-  padding: 2rem;
-  border-top: 1px solid #2a003f;
-  margin-top: 4rem;
-}
-
-a {
-  color: #d8b4fe;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: #f3e8ff;
-  text-decoration: underline;
-}
-
-nav {
-  background-color: #0a001a;
-  border-bottom: 1px solid #4c1d95;
-}
-
-.topnav {
+  height: 100vh;
+  overflow: hidden;
   display: flex;
+  align-items: center;
   justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0.75rem 0;
-}
-
-.topnav li {
-  margin: 0 1.5rem;
-}
-
-.topnav a {
-  color: #c084fc;
-  text-decoration: none;
-  font-family: 'Courier New', monospace;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.topnav a:hover {
-  color: #f3e8ff;
-  text-shadow: 0 0 5px #a855f7;
-}
-
-#countdown-container {
-  background-color: #0a001a;
-  color: #a855f7;
-  padding: 0.5rem;
+  flex-direction: column;
   text-align: center;
-  font-family: 'Courier New', monospace;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  border-bottom: 1px solid #4c1d95;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-#countdown-container {
-  background-color: #0a001a;
-  color: #a855f7;
-  padding: 0.5rem;
-  text-align: center;
-  font-family: 'Courier New', monospace;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  border-bottom: 1px solid #4c1d95;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffefef;
+  animation: flicker 2s infinite;
+  z-index: 2;
+}
+
+p {
+  font-size: 1rem;
+  color: #ffcccc;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.error-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 0.75rem;
+  color: #ff8888;
+  opacity: 0.6;
+  animation: flicker 3s infinite;
+  z-index: 2;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glyph-watermark {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  opacity: 0.08;
+  z-index: 1;
+  max-height: 80px;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  55% { opacity: 0.8; }
+  60% { opacity: 0.2; }
+  65% { opacity: 0.7; }
+  70% { opacity: 0.5; }
+}
