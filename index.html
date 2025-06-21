@@ -1,133 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Observation Log: The Void Mother</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-        body {
-            background-color: #000000;
-            background-image: radial-gradient(#b794f4 1px, transparent 1px),
-                radial-gradient(#b794f4 1px, transparent 1px);
-            background-position: 0 0, 25px 25px;
-            background-size: 50px 50px;
-            color: #d0c4e8;
-  }
-    </style>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const countdownElement = document.getElementById('countdown');
-
-    let endTime = localStorage.getItem("void_timer_end");
-
-    if (!endTime) {
-      const now = new Date();
-      now.setSeconds(0);
-      const sixDaysLater = new Date(now.getTime() + 6 * 24 * 60 * 60 * 1000);
-      endTime = sixDaysLater.getTime();
-      localStorage.setItem("void_timer_end", endTime);
-    } else {
-      endTime = parseInt(endTime, 10);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azhinu Station</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #300000;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
     }
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = endTime - now;
-
-      if (distance <= 0) {
-        countdownElement.textContent = "WAVE 1 COMPLETE — NEW INFO SOON";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownElement.textContent =
-        `TIME REMAINING: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffefef;
+      animation: flicker 2s infinite;
     }
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  });
-</script>
+    p {
+      font-size: 1rem;
+      color: #ffcccc;
+      margin-top: 0.5rem;
+      opacity: 0.8;
+    }
 
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      45% { opacity: 0.8; }
+      50% { opacity: 0.4; }
+      55% { opacity: 0.8; }
+      60% { opacity: 0.2; }
+      65% { opacity: 0.7; }
+      70% { opacity: 0.5; }
+    }
+  </style>
 </head>
 <body>
-    <div id="countdown-container">
-  <p id="countdown">TIME REMAINING: Loading...</p>
-</div>
-    <nav>
-        <ul class="topnav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="interviews.html">Interviews</a></li>
-            <li><a href="boreas.html">The Fate of Boreas</a></li>
-        </ul>
-    </nav>
-    
-  <header>
-    <h1><span class="glitch">Observation Log: The Void Mother</span></h1>
-    <p>Documenting anomalous transmissions, corrupted planet expeditions, and recovered logs</p>
-  </header>
-
-  <main>
-    <section id="intro">
-      <h2>Welcome Traveller</h2>
-      <p>This secure node is designated for the ongoing investigation into the Atlantid ("Void Mother"). Most information here is fragmented, redacted, and possibly corrupted. Proceed with caution.</p>
-    </section>
-
-    <section id="logs">
-      <h2>Recovered Logs</h2>
-      <div class="log-entry">
-        <p><strong>[Transmission from Iteration: Castor]</strong> - -kzzt- During my expedition today -kzzzt- found records from a crew -kzzkt- something about 'Abyss', and the log -kzztzzt- ended -kzzzt- found the broadcast site -kzzzt- no remains of the crew"</p>
-      </div>
-      <div class="log-entry">
-    <p><strong>[Holo-Terminus record snippet from an unknown Korvax (translation may be inaccurate)]</strong> - "The nanite flow in the oceans fooled the Convergence. I've heard some talk about the AI of Korvax Prime and-" [cuts off]</p>
-      </div>
-      <div class="log-entry">
-        <p><strong>[Explorers Guild Research Log 188D - First recorded information on "Atlantideum"]</strong> - "The purple crystals humm, like they are trying to whisper something to me. I tried calculating the frequency to figure out what it's from, but the oscilloscope's insides corroded. It seems this substance is highly reactive.</p>
-      </div>
-      <div class="log-entry">
-        <p><strong>[Decoded transmission discovered in a Korvax Archive]</strong> - KORVAX PRIME FELL ALONG WITH THE BIRTH OF A NEW ATLANTID- SHE SEES THROUGH OUR EYES- //16// THE HIVEMIND //19// [transmission ends]</p>
-      </div>
-    </section>
-    
-  <section id="fatalities">
-  <h2>Important Corrupted Sentinel Engagements</h2>
-
-  <div class="log-entry">
-    <p><strong>Designation:</strong> Iteration: Themis</p>
-    <p><strong>Cause:</strong> Incinerated during direct confrontation with corrupted drone hive</p>
-  </div>
-
-  <div class="log-entry">
-    <p><strong>Designation:</strong> Sentinel Hunter Hizh (Vy'keen)</p>
-    <p><strong>Cause:</strong> Went missing after assigned Dissonance Resonator extraction</p>
-  </div>
-
-  <div class="log-entry">
-    <p><strong>Designation:</strong><i> Unknown</i></p>
-    <p><strong>Cause:</strong> Distress beacon located after odd space transmission</p>
-  </div>
-
-</section>
-
-    <section id="ae5f70d79a2f7d2055d4eeddb77b31c4">
-      <h2>Known information</h2>
-      <ul>
-        <li>'Atlantid' is an entity that seems to be similar to the Atlas in forms of communication and influence.</li>
-        <li>She is able to affect the behavioral systems of Sentinels.</li>
-        <li>She may be the cause of corrupted Sentinels and planets.</li>
-        <li>It appears that the Korvax and Atlantid have some sort of connection.</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>Do not drink the water.</p>
-    <p>© Apakurus Traveller Division</p>
-  </footer>
+  <h1>STATION DEFUNCT</h1>
+  <p>ABS Archive access key lost.</p>
 </body>
 </html>
