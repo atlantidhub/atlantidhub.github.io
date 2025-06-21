@@ -1,16 +1,15 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #300000;
-  color: #fff;
-  font-family: 'Courier New', monospace;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  background-color: #8b0000;
+}
+
+body.glitching {
+  animation: bg-glitch 0.2s ease-in-out;
+}
+
+@keyframes bg-glitch {
+  0%   { background-color: #8b0000; }
+  50%  { background-color: #ff0000; }
+  100% { background-color: #8b0000; }
 }
 
 h1 {
