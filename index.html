@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Azhinu Station</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <script>
+  // Periodically trigger background glitch
+  setInterval(() => {
+    document.body.classList.add('glitching');
+    setTimeout(() => {
+      document.body.classList.remove('glitching');
+    }, 200); // Glitch duration
+  }, 7000); // Every 7 seconds
+</script>
 </head>
 <body>
   <div class="error-tag">KORVAX ARCHIVE PORT ERROR 009</div>
