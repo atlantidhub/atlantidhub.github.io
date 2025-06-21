@@ -14,8 +14,6 @@ html, body {
   position: relative;
 }
 
-}
-
 body.glitching {
   animation: bg-glitch 0.2s ease-in-out;
 }
