@@ -1,0 +1,43 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #7c0a02;
+  color: white;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1.glitch {
+  font-size: 3em;
+  animation: flicker 2.5s infinite alternate;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-top: 1em;
+  opacity: 0.85;
+}
+
+.error {
+  font-size: 0.9em;
+  margin-top: 2em;
+  color: #ff6961;
+  animation: flicker 1.2s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; transform: translateY(-1px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
