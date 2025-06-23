@@ -1,51 +1,60 @@
 body {
-  background-color: #0b1110;
-  color: #d1d1d1;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 2em;
-  line-height: 1.6;
+    background-color: #0a0f0e;
+    color: #cceeff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 40px;
+    line-height: 1.6;
 }
 
 h1 {
-  color: #77f7df;
-  font-size: 1.6em;
-  font-weight: bold;
+    font-size: 1.8em;
+    color: #96f2d7;
 }
 
-.interview-header {
-  color: #45f3ff;
-  font-weight: bold;
+.interview-frag {
+    color: #96f2d7;
+    font-weight: bold;
 }
 
 .interviewer {
-  color: #cc66ff;
+    color: #d19fff;
 }
 
 .autophage {
-  color: #ffc266;
+    color: #f0c36d;
+    font-weight: bold;
 }
 
-.glitch-note {
-  color: #ff6666;
-  font-style: italic;
+.cutoff {
+    font-style: italic;
+    color: #f25c5c;
 }
 
-.error-block {
-  color: #ff4f4f;
-  font-weight: bold;
-  margin-top: 1em;
+.error {
+    color: #ff3c3c;
+    font-weight: bold;
+}
+
+.route {
+    color: #ff3c3c;
+}
+
+.arg-notes {
+    color: #eeeeee;
+    margin-top: 20px;
 }
 
 .cipher {
-  color: #d1d1d1;
-  background-color: #1e1e1e;
-  padding: 0.5em;
-  margin: 1em 0;
-  font-family: monospace;
-  font-size: 0.95em;
+    background-color: #1a1a1a;
+    color: #f8f8f8;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
 }
 
-.cipher-translation {
-  font-size: 0.85em;
-  color: #9fff9f;
+.translation {
+    font-size: 0.9em;
+    color: #00ff66;
+    font-style: italic;
+    margin-top: 4px;
 }
