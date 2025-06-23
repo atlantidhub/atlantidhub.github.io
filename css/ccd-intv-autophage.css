@@ -1,51 +1,37 @@
 body {
     background-color: #0d1a1a;
     font-family: monospace;
-    color: #cceeff;
-    margin: 40px;
-    line-height: 1.6;
-}
-
-.fragment {
-      margin-bottom: 3rem;
-      border-left: 2px solid #00cccc;
-      padding-left: 1rem;
+    color: #ccffff;
+    padding: 2rem;
     }
-
+.fragment {
+    margin-bottom: 3rem;
+    border-left: 2px solid #00cccc;
+    padding-left: 1rem;
+    }
 .interviewer, .autophage {
-      margin: 0.5rem 0;
-}
-
+    margin: 0.5rem 0;
+    }
 .interviewer::before {
     content: "[INTERVIEWER] ";
     color: #99ccff;
-  }
-
+    }
 .autophage::before {
   content: "Autophage ";
   color: #ffff99;
   }
-
 .cutoff {
     font-style: italic;
     color: #f25c5c;
 }
-
 .error {
     color: #ff3c3c;
     font-weight: bold;
 }
-
 .route {
     color: #ff3c3c;
 }
-
-.arg-notes {
-    color: #eeeeee;
-    margin-top: 20px;
-}
-
-.cipher {
+.64 {
     background-color: #1a1a1a;
     color: #f8f8f8;
     padding: 10px;
@@ -54,8 +40,5 @@ body {
 }
 
 .translation {
-    font-size: 0.9em;
-    color: #00ff66;
-    font-style: italic;
-    margin-top: 4px;
+    /* Atlas Protocol Dissent Measure: enabled */
 }
