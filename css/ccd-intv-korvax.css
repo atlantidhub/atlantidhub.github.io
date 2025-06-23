@@ -19,8 +19,12 @@ body {
     content: "[INTERVIEWER] ";
     color: #99ccff;
   }
-.korvax::before {
-  content: "Korvax ";
+.korvaxuda::before {
+  content: "Research Entity ";
+  color: #ffff99;
+  }
+.korvaxez::before {
+  content: "Echo Analyst Entity ";
   color: #ffff99;
   }
 .glitch {
