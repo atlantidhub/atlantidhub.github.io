@@ -1,29 +1,30 @@
 body {
-    background-color: #0a0f0e;
+    background-color: #0d1a1a;
+    font-family: monospace;
     color: #cceeff;
-    font-family: 'Courier New', Courier, monospace;
     margin: 40px;
     line-height: 1.6;
 }
 
-h1 {
-    font-size: 1.8em;
-    color: #96f2d7;
+.fragment {
+      margin-bottom: 3rem;
+      border-left: 2px solid #00cccc;
+      padding-left: 1rem;
+    }
+
+.interviewer, .autophage {
+      margin: 0.5rem 0;
 }
 
-.interview-frag {
-    color: #96f2d7;
-    font-weight: bold;
-}
+.interviewer::before {
+    content: "[INTERVIEWER] ";
+    color: #99ccff;
+  }
 
-.interviewer {
-    color: #d19fff;
-}
-
-.autophage {
-    color: #f0c36d;
-    font-weight: bold;
-}
+.autophage::before {
+  content: "Autophage ";
+  color: #ffff99;
+  }
 
 .cutoff {
     font-style: italic;
