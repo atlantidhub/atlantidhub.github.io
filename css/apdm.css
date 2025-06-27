@@ -1,0 +1,46 @@
+body {
+  background-color: #000010;
+  color: #99ccff;
+  font-family: monospace;
+  padding: 2rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #4466aa;
+}
+
+.intro-line {
+  color: #66aaff;
+  margin-bottom: 0.5rem;
+}
+
+.file-entry {
+  background-color: #0c1020;
+  border-left: 3px solid #3399ff;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.file-entry a {
+  color: #88ddff;
+  text-decoration: none;
+}
+
+.file-entry a:hover {
+  text-decoration: underline;
+}
+
+.glitch {
+  color: #ff66cc;
+  font-style: italic;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 3rem;
+  text-align: right;
+}
