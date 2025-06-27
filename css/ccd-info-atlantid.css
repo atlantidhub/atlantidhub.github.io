@@ -1,20 +1,8 @@
 body {
-  background-color: #0d0a15; 
+  background-color: #0d0a15;
   font-family: monospace;
   color: #d5b3ff;
   padding: 2rem;
-}
-.section {
-  margin-bottom: 2rem;
-  border-left: 2px solid #bb00ff;
-  padding-left: 1rem;
-}
-
-.section h2 {
-  color: #e2ccff;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -24,37 +12,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.abs-note {
-  color: #bb00ff;
-  background: #1a001f;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  border-left: 3px solid #bb00ff;
-}
-
 .abs-warning {
   background-color: #130018;
   color: #d5b3ff;
   padding: 1rem;
   border-left: 3px solid #bb00ff;
   margin: 2rem 0;
-  font-family: monospace;
   font-size: 0.95rem;
-}
-
-.file-log {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.file-log li {
-  font-family: monospace;
-  color: #d0afff;
-  background-color: #1a001f;
-  padding: 0.25rem 0.75rem;
-  border-left: 2px solid #aa66ff;
-  margin-bottom: 0.4rem;
 }
 
 .abs-disclaimer {
@@ -65,18 +29,15 @@ h1 {
   padding-top: 0.5rem;
 }
 
+.glitch {
+  color: #ff66cc;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
 .footer-note {
   font-size: 0.8rem;
   color: #888;
-  margin-top: 4rem;
   text-align: right;
-}
-
-.flagged {
-  background-color: #220033;
-  border-left: 4px solid #ff00ff;
-  padding-left: 1rem;
-  font-style: italic;
-  margin: 1rem 0;
-  color: #ffc9ff;
+  margin-top: 3rem;
 }
