@@ -1,51 +1,82 @@
 body {
-  margin: 0;
-  background-color: #5e41a6;
-  font-family: 'Courier New', monospace;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  color: white;
+  background-color: #0d0a15; 
+  font-family: monospace;
+  color: #d5b3ff;
+  padding: 2rem;
+}
+.section {
+  margin-bottom: 2rem;
+  border-left: 2px solid #bb00ff;
+  padding-left: 1rem;
 }
 
-.container {
-  text-align: center;
-  z-index: 2;
+.section h2 {
+  color: #e2ccff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.port-label {
-  font-weight: bold;
+h1 {
+  color: #f0e6ff;
+  border-bottom: 1px solid #bb00ff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-.port-name {
-  font-weight: bold;
-  background-color: #2b1b53;
-  padding: 0 6px;
-  display: inline-block;
-  margin-left: 8px;
+.abs-note {
+  color: #bb00ff;
+  background: #1a001f;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  border-left: 3px solid #bb00ff;
 }
 
-.status {
-  margin-top: 16px;
-  font-size: 1.1em;
-  color: #e4e4e4;
+.abs-warning {
+  background-color: #130018;
+  color: #d5b3ff;
+  padding: 1rem;
+  border-left: 3px solid #bb00ff;
+  margin: 2rem 0;
+  font-family: monospace;
+  font-size: 0.95rem;
 }
 
-.noise::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.05) 0,
-    rgba(0, 0, 0, 0.05) 1px,
-    transparent 1px,
-    transparent 6px
-  );
-  opacity: 0.15;
-  z-index: 1;
+.file-log {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.file-log li {
+  font-family: monospace;
+  color: #d0afff;
+  background-color: #1a001f;
+  padding: 0.25rem 0.75rem;
+  border-left: 2px solid #aa66ff;
+  margin-bottom: 0.4rem;
+}
+
+.abs-disclaimer {
+  font-size: 0.85rem;
+  color: #a386d6;
+  margin-top: 1rem;
+  border-top: 1px dashed #8833bb;
+  padding-top: 0.5rem;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 4rem;
+  text-align: right;
+}
+
+.flagged {
+  background-color: #220033;
+  border-left: 4px solid #ff00ff;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1rem 0;
+  color: #ffc9ff;
 }
