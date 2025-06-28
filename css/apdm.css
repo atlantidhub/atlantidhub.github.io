@@ -33,9 +33,17 @@ h1 {
   text-decoration: underline;
 }
 
-.glitch {
+.glitched {
   color: #ff66cc;
   font-style: italic;
+  letter-spacing: 0.03rem;
+  text-shadow: 0 0 5px #ff33cc;
+}
+.glitched-alt {
+  background-color: #100010;
+  border-left: 4px dashed #ff00aa;
+  margin-left: 2rem;
+  padding: 1rem;
 }
 
 .footer-note {
@@ -43,4 +51,10 @@ h1 {
   color: #888;
   margin-top: 3rem;
   text-align: right;
+}
+
+.footer-note.glitch {
+  color: #ff66cc;
+  font-style: italic;
+  letter-spacing: 0.1rem;
 }
