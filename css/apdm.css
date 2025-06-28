@@ -34,10 +34,10 @@ h1 {
 }
 
 .glitched {
-  color: #ff66cc;
+  color: #88ddff;
   font-style: italic;
   letter-spacing: 0.03rem;
-  text-shadow: 0 0 5px #ff33cc;
+  text-shadow: 0 0 5px #88c7ff;
 }
 .glitched-alt {
   background-color: #a63737;
