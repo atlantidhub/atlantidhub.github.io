@@ -1,0 +1,55 @@
+
+body {
+  background-color: #0d0010;
+  color: #e0ccff;
+  font-family: monospace;
+  padding: 2rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #9900cc;
+}
+
+.intro-line {
+  color: #aa88ff;
+  margin-bottom: 0.5rem;
+}
+
+.entry {
+  border-left: 3px solid #8844cc;
+  background-color: #1a0b20;
+  margin: 1.5rem 0;
+  padding: 1rem;
+}
+
+.entry h3 {
+  color: #f2e6ff;
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  font-style: italic;
+  color: #f0d8ff;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.75rem;
+}
+
+.glitched .quote {
+  color: #ff66cc;
+  text-shadow: 0 0 4px #ff99ff;
+  letter-spacing: 0.05rem;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+  margin-top: 3rem;
+}
