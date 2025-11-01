@@ -85,7 +85,7 @@ p, pre, .meta, .foot{ margin:0 0 8px; }
 .mb1{ margin-bottom:.35rem; }
 
 .meta{ display:grid; gap:.2rem; }
-
+/* Thanks Google for all the coding help :O */
 pre{
   white-space:pre-wrap;
   word-wrap:break-word;
@@ -93,6 +93,22 @@ pre{
   border:0;
   padding:0;
   font:inherit;
+}
+
+.approve{
+  color:"#32cd32"
+}
+
+.reject{
+  color:"#ff0000"
+}
+
+.intermittent{
+  color:"#ffffff"
+}
+
+.caution{
+  color:"#ffd700"
 }
 
 .sys{ letter-spacing:.02em; }
