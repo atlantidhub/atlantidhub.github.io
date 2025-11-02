@@ -130,15 +130,14 @@ pre{
 @keyframes blink{ 50%{ opacity:0; } }
 
 [data-typing]{
-  overflow:clip;
+  overflow:hidden;
   display:block;
   max-height:0;
   opacity:0;
   transform:translateY(2px);
-  transition:opacity .25s ease, transform .25s ease, max-height .25s ease;
+  transition:opacity .25s ease, transform .25s ease, max-height .35s ease;
 }
 [data-typing].show{
-  max-height:600px;
   opacity:1;
   transform:none;
 }
