@@ -28,6 +28,10 @@
   --avatar-mk-fg: #712B13;
   --avatar-dv-bg: #CECBF6;
   --avatar-dv-fg: #3C3489;
+  --avatar-rp-bg: #C0DD97;
+  --avatar-rp-fg: #27500A;
+  --avatar-dp-bg: #FAC775;
+  --avatar-dp-fg: #633806;
 }
 
 body {
@@ -232,6 +236,8 @@ body {
 .avatar-be { background: var(--avatar-be-bg); color: var(--avatar-be-fg); }
 .avatar-mk { background: var(--avatar-mk-bg); color: var(--avatar-mk-fg); }
 .avatar-dv { background: var(--avatar-dv-bg); color: var(--avatar-dv-fg); }
+.avatar-rp { background: var(--avatar-rp-bg); color: var(--avatar-rp-fg); }
+.avatar-dp { background: var(--avatar-dp-bg); color: var(--avatar-dp-fg); }
 
 .author-name {
   font-family: 'IBM Plex Mono', monospace;
