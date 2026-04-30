@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>baska.com — community forum</title>
+  <link rel="stylesheet" href="forum.css" />
+</head>
+<body>
+
+  <div class="forum-header">
+    <div class="forum-logo">baska<span>.com</span></div>
+    <div class="forum-tagline">community forum — est. 1999</div>
+  </div>
+
+  <div class="forum-nav">
+    <div class="forum-nav-item active">general</div>
+    <div class="forum-nav-item">music & releases</div>
+    <div class="forum-nav-item">off-topic</div>
+  </div>
+
+  <div class="forum-body">
+
+    <!-- ── Thread list ── -->
+    <div id="thread-list-view">
+      <div class="subforum-label">music & releases</div>
+      <div class="thread-list">
+
+        <div class="thread-item" onclick="showThread('welcome')">
+          <div>
+            <div class="thread-title">welcome to baska.com</div>
+            <div class="thread-meta">belska · Oct 14, 1999</div>
+          </div>
+          <div class="thread-stats">4 replies<br>Oct 16</div>
+        </div>
+
+        <div class="thread-item" onclick="showThread('argent')">
+          <div>
+            <div class="thread-title">argent EP — out now. thoughts?</div>
+            <div class="thread-meta">scStix · Oct 28, 1999</div>
+          </div>
+          <div class="thread-stats">6 replies<br>Nov 2</div>
+        </div>
+
+        <div class="thread-item" onclick="showThread('wishflower')">
+          <div>
+            <div class="thread-title">anyone else have a copy of wishflower?</div>
+            <div class="thread-meta">mkdavis · Oct 30, 1999</div>
+          </div>
+          <div class="thread-stats">3 replies<br>Nov 1</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Thread: welcome ── -->
+    <div id="thread-welcome" class="thread-view">
+      <div class="thread-view-header">
+        <button class="back-btn" onclick="showList()">← back</button>
+        <p class="thread-view-title">welcome to baska.com</p>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-be">JB</div>
+          <div class="author-name">belska</div>
+          <div class="author-role">admin</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 14, 1999 · 7:32pm</div>
+          <div class="post-text">
+            <p>hey everyone. so james and i figured it'd be cool to have somewhere online to talk about his music — sean over at dystix was pushing for it too, so here we are.</p>
+            <p>don't expect anything too crazy here. it's just a place to hang out, share thoughts on the music, whatever. james might pop in every now and then. keep it chill.</p>
+            <p>— josh</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-sc">SC</div>
+          <div class="author-name">scStix</div>
+          <div class="author-role">dystix records</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 14, 1999 · 8:11pm</div>
+          <div class="post-text">
+            <p>glad this is finally up. been telling josh to do this for months. if you found this place you probably already know the music — argent EP drops in about two weeks so stay tuned. it's good. trust me on that.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-jb">JB</div>
+          <div class="author-name">jamesbaskin</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 15, 1999 · 12:04am</div>
+          <div class="post-text">
+            <p>hi. weird having a forum about my music but here we are i guess. looking forward to seeing what people think of argent.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-mk">MK</div>
+          <div class="author-name">mkdavis</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 15, 1999 · 9:47am</div>
+          <div class="post-text">
+            <p>james!! saw you play at the summit back in like '97 and have been waiting for something properly released ever since. glad this is happening</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-jb">JB</div>
+          <div class="author-name">jamesbaskin</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 15, 1999 · 2:18pm</div>
+          <div class="post-text">
+            <p>haha yeah the summit. those sets were kind of a mess honestly but i'm glad you stuck around</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Thread: argent ── -->
+    <div id="thread-argent" class="thread-view">
+      <div class="thread-view-header">
+        <button class="back-btn" onclick="showList()">← back</button>
+        <p class="thread-view-title">argent EP — out now. thoughts?</p>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-sc">SC</div>
+          <div class="author-name">scStix</div>
+          <div class="author-role">dystix records</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 28, 1999 · 10:02am</div>
+          <div class="post-text">
+            <p>it's out. go get it. CD available through the dystix site, digital should be up by end of week. four tracks, about 14 minutes. not a lot but it's a hell of an introduction.</p>
+            <p>curious what people think of 6 marrakesh especially — that one surprised even me when james sent it over.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-mk">MK</div>
+          <div class="author-name">mkdavis</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 28, 1999 · 3:55pm</div>
+          <div class="post-text">
+            <p>listened twice already. argent and filt are like a slap to the face — way more industrial than i expected after the wishflower stuff. then fluta comes in and it's like ok he can do something delicate too. and then 6 marrakesh just goes somewhere else entirely. really good EP.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-jb">JB</div>
+          <div class="author-name">jamesbaskin</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 28, 1999 · 6:30pm</div>
+          <div class="post-text">
+            <p>glad 6 marrakesh is landing the way it is. that one took a while. everything else on the EP came together pretty fast but that track kept changing for months.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-dv">DV</div>
+          <div class="author-name">dvarga</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 29, 1999 · 11:22am</div>
+          <div class="post-text">
+            <p>found this place through a post on WATMM. picked up the EP this morning. filt is insane, those drum edits are so precise. reminds me a bit of polygon window era aphex but it's doing something different. following closely.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-jb">JB</div>
+          <div class="author-name">jamesbaskin</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 29, 1999 · 4:07pm</div>
+          <div class="post-text">
+            <p>polygon window is a compliment i'll take. though i'd say the reference point for filt was more just me being annoyed at my own drum programming and overcorrecting</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-be">JB</div>
+          <div class="author-name">belska</div>
+          <div class="author-role">admin</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Nov 2, 1999 · 8:45pm</div>
+          <div class="post-text">
+            <p>the WATMM mentions are picking up a bit. a few more people registering this week than i expected. not complaining</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Thread: wishflower ── -->
+    <div id="thread-wishflower" class="thread-view">
+      <div class="thread-view-header">
+        <button class="back-btn" onclick="showList()">← back</button>
+        <p class="thread-view-title">anyone else have a copy of wishflower?</p>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-mk">MK</div>
+          <div class="author-name">mkdavis</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 30, 1999 · 2:14pm</div>
+          <div class="post-text">
+            <p>got mine at a gig in '97. just a burned CD with handwriting on it. wondering if anyone else has one — and if the tracklist matches. mine goes: myopia / wishflower / kola / there is music in us / porraceous / [untitled last track]</p>
+            <p>that last one is so short but it's kind of haunting. anyone know if it has a name?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-jb">JB</div>
+          <div class="author-name">jamesbaskin</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Oct 30, 1999 · 5:58pm</div>
+          <div class="post-text">
+            <p>yeah that tracklist is right. the last one doesn't really have a name. never felt like it needed one.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-dv">DV</div>
+          <div class="author-name">dvarga</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Nov 1, 1999 · 9:30am</div>
+          <div class="post-text">
+            <p>wish i had a copy. any chance of a proper release someday or is it staying as a gig-only thing?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">
+          <div class="author-avatar avatar-jb">JB</div>
+          <div class="author-name">jamesbaskin</div>
+          <div class="author-role">member</div>
+        </div>
+        <div class="post-body">
+          <div class="post-date">Nov 1, 1999 · 1:45pm</div>
+          <div class="post-text">
+            <p>probably not. those tracks are pretty old at this point and most of them were more about figuring out what i was doing than making something finished. kola and porraceous i still like but the rest feel like a different person made them.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function showThread(id) {
+      document.getElementById('thread-list-view').style.display = 'none';
+      document.querySelectorAll('.thread-view').forEach(t => t.classList.remove('visible'));
+      document.getElementById('thread-' + id).classList.add('visible');
+    }
+
+    function showList() {
+      document.getElementById('thread-list-view').style.display = 'block';
+      document.querySelectorAll('.thread-view').forEach(t => t.classList.remove('visible'));
+    }
+  </script>
+
+</body>
+</html>
