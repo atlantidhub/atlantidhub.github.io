@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f4f1;
+  --bg-tertiary: #eeede9;
+  --text-primary: #1a1a18;
+  --text-secondary: #5f5e5a;
+  --text-tertiary: #9a9892;
+  --border-light: rgba(0,0,0,0.1);
+  --border-mid: rgba(0,0,0,0.18);
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --avatar-jb-bg: #B5D4F4;
+  --avatar-jb-fg: #0C447C;
+  --avatar-sc-bg: #9FE1CB;
+  --avatar-sc-fg: #085041;
+  --avatar-be-bg: #D3D1C7;
+  --avatar-be-fg: #444441;
+  --avatar-mk-bg: #F5C4B3;
+  --avatar-mk-fg: #712B13;
+  --avatar-dv-bg: #CECBF6;
+  --avatar-dv-fg: #3C3489;
+}
+
+body {
+  font-family: 'Bitter', Georgia, serif;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+
+.forum-header {
+  background: var(--bg-primary);
+  border-bottom: 0.5px solid var(--border-light);
+  padding: 18px 24px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.forum-logo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.forum-logo span {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.forum-tagline {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+/* ── Nav ── */
+
+.forum-nav {
+  background: var(--bg-primary);
+  border-bottom: 0.5px solid var(--border-light);
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+}
+
+.forum-nav-item {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  letter-spacing: 0.3px;
+  user-select: none;
+}
+
+.forum-nav-item.active {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+}
+
+/* ── Body ── */
+
+.forum-body {
+  padding: 20px 24px;
+  max-width: 820px;
+}
+
+.subforum-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin: 0 0 10px;
+}
+
+/* ── Thread list ── */
+
+.thread-list {
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.thread-item {
+  padding: 14px 18px;
+  border-bottom: 0.5px solid var(--border-light);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.thread-item:last-child {
+  border-bottom: none;
+}
+
+.thread-item:hover {
+  background: var(--bg-secondary);
+}
+
+.thread-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 3px;
+}
+
+.thread-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.thread-stats {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ── Thread view ── */
+
+.thread-view {
+  display: none;
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.thread-view.visible {
+  display: block;
+}
+
+.thread-view-header {
+  padding: 16px 20px;
+  border-bottom: 0.5px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border: 0.5px solid var(--border-mid);
+  border-radius: var(--radius-md);
+  background: none;
+  transition: background 0.15s;
+}
+
+.back-btn:hover {
+  background: var(--bg-secondary);
+}
+
+.thread-view-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ── Posts ── */
+
+.post {
+  padding: 18px 20px;
+  border-bottom: 0.5px solid var(--border-light);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 18px;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.post-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding-top: 2px;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.avatar-jb { background: var(--avatar-jb-bg); color: var(--avatar-jb-fg); }
+.avatar-sc { background: var(--avatar-sc-bg); color: var(--avatar-sc-fg); }
+.avatar-be { background: var(--avatar-be-bg); color: var(--avatar-be-fg); }
+.avatar-mk { background: var(--avatar-mk-bg); color: var(--avatar-mk-fg); }
+.avatar-dv { background: var(--avatar-dv-bg); color: var(--avatar-dv-fg); }
+
+.author-name {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.author-role {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.post-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin: 0 0 10px;
+}
+
+.post-text {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--text-primary);
+}
+
+.post-text p {
+  margin: 0 0 10px;
+}
+
+.post-text p:last-child {
+  margin: 0;
+}
+
+.quote-block {
+  border-left: 2px solid var(--border-mid);
+  padding: 6px 12px;
+  margin: 8px 0;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.quote-attr {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  font-style: normal;
+  display: block;
+  margin-bottom: 3px;
+}
