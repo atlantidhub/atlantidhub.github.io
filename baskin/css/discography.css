@@ -35,6 +35,29 @@ p {
   color: #555;
 }
 
+.album-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.album-list li {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.album-list a {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid #d0d0d0;
+  transition: border-color 0.2s;
+}
+
+.album-list a:hover {
+  border-bottom-color: #999;
+}
+
 .album {
   background-color: #fff;
   border: 1px solid #d0d0d0;
